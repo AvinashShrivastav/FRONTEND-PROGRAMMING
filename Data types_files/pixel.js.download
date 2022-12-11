@@ -1,0 +1,29 @@
+setPixelEvents();
+
+function setPixelEvents() {
+  try {
+    const searchParams = new URLSearchParams(window.location.search);
+    const pixelEvent = searchParams.get('pixelEvent');
+    const didSignUp = searchParams.get('didSignUp') === 'true';
+
+    if (didSignUp) {
+      localStorage.setItem('pixelEvent', 'CompleteRegistration');
+      const pixelTimer = setInterval(() => {
+        if (window.fbq !== undefined) {
+          clearInterval(pixelTimer);
+          window.fbq('track', 'CompleteRegistration');
+        }
+      }, 50);
+    }
+
+    if (pixelEvent !== null) {
+      localStorage.setItem('pixelEvent', pixelEvent);
+      const pixelTimer = setInterval(() => {
+        if (window.fbq !== undefined) {
+          clearInterval(pixelTimer);
+          window.fbq('track', pixelEvent);
+        }
+      }, 50);
+    }
+  } catch (e) {}
+}
