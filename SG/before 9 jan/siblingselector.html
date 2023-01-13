@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sibling Selector</title>
+    <style>
+        div ~ p {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+        <section>
+            <p>Paragraph 3 in section of the div.</p>
+        </section>
+    </div>
+    <p>Paragraph 4. Not in a div</p>
+    <p>Paragraph 5. Not in a div.</p>
+</body>
+</html>

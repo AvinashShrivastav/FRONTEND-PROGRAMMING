@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Psuedo Selectors and others</title>
+    <style>
+        input:focus {
+            background-color: aqua;
+
+        }
+
+        input:hover {
+            background-color: yellow;
+
+        }
+
+        a:link {
+            color: blue;
+        }
+
+        a:visited {
+            color: purple;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:active {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        First Name: <input type="text" name="fname"> <br> <br>
+        Last Name: <input type="text" name="lname"> <br> <br>
+        <input type="submit" value="Submit"> <br><br>
+        Gender:
+        Male <input type="radio" name="gender" id="1">
+        Female <input type="radio" name="gender" id="2">
+        <br> <br>
+
+        What do you like ?
+        Sports <input type="checkbox" name="like" id="1">
+        Studies <input type="checkbox" name="like" id="2">
+        Nothing <input type="checkbox" name="like" id="2">
+        <br> <br>
+
+        <a href="#">Hey! I'm a color changing link, I am blue when unvisited, red on hover, orange on active and purple
+            on visited</a>
+    </form>
+</body>
+
+</html>
