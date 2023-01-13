@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS with javascript</title>
+</head>
+<body>
+    <input type="range" name="opacity" id="slider" min="0" max="100" onchange="changeOpacity()">
+    <h1 id = "main">I'm a Heading. My opacity changes dynamically</h1>
+    <div id = "opacityValue"></div>
+    <script>
+        function changeOpacity(){
+            var value = parseInt(document.getElementById("slider").value);
+            document.getElementById("main").style.opacity = value/100;
+            document.getElementById("opacityValue").innerHTML = "Opacity value: " + value/100;
+        }
+    </script>
+</body>
+</html>
