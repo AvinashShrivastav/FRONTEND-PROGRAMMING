@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>First-line psuedoelement</title>
+    <style>
+        h1::first-letter{
+            color: dodgerblue;
+            font-size: 40pt;
+        }
+        p::first-line{
+            color: lightskyblue;
+            font-variant: small-caps;
+        }
+        p::first-letter{
+            color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <h1>I'm a Heading</h1>
+    <p>I'm first line of a paragraph
+        <br>
+        And I'm the second one!
+    </p>
+    <p>I'm first line of an another paragraph
+        <br>
+        And I'm the second one!
+    </p>
+</body>
+</html>

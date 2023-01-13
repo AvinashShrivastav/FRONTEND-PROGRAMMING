@@ -1,0 +1,23 @@
+1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Change text color with javascript</title>
+</head>
+<body>
+    Red: <input type="range" id="red" min="0" max="255" value = "0" onchange="changeColor()">
+    Green: <input type="range"  id="green" min="0" max="255"  value = "0" onchange="changeColor()">
+    Blue: <input type="range"  id="blue" min="0" max="255" value = "0"  onchange="changeColor()">
+    <h1 id = "main">I'm a Heading. My color changes dynamically</h1>
+    <div id = "colorCode"></div>
+    <script>
+        function changeColor(){
+            var r = parseInt(document.getElementById("red").value);
+            var g = parseInt(document.getElementById("green").value);
+            var b = parseInt(document.getElementById("blue").value);
+            document.getElementById("main").style.color = "rgb("+r+","+g+","+b+")";
+            document.getElementById("colorCode").innerHTML = "Color code : rgb("+r+","+g+","+b+")";
+        }
+    </script>
+</body>
+</html>

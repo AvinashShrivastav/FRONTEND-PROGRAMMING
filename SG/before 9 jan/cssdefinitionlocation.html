@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Definition Location</title>
+    <link rel="stylesheet" href="externalcss.css">
+    <style>
+        p.internal-css{
+            background-color: red;
+            font-family: serif;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <p style ="color: red; font-size: 10px;"> I'm a paragraph. I have been styled using inline CSS</p>
+    <p class ="internal-css">I'm an another paragraph. I have been styled using Internal CSS</p>
+    <p class = "external-css">I'm yet paragraph. I've been styled using External CSS</p>
+</body>
+</html>
