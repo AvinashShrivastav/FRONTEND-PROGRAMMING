@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS list</title>
+    <style>
+        #imageList{
+            list-style-image: url(smiley.jpg);
+        }
+        #insideList{
+            list-style-position: inside;
+        }
+        #insideList li{
+            border: 1px solid black;
+
+        }
+        #outsideList li{
+            border: 1px solid black;
+
+        }
+        #outsideList{
+            list-style-position: outside;
+        }
+        #nostyleList{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        #shorthand{
+            list-style: square inside url(smiley.jpg);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h3>Unordered List</h3>
+        <ul>
+            <li>An item of an unordered list</li>
+            <li>An item of an unordered list</li>
+            <li>An item of an unordered list</li>
+            <li>An item of an unordered list</li>
+            <li>An item of an unordered list</li>
+        </ul>
+        <h3>Ordered List</h3>
+        <ol>
+            <li>An item of an ordered list</li>
+            <li>An item of an ordered list</li>
+            <li>An item of an ordered list</li>
+            <li>An item of an ordered list</li>
+            <li>An item of an ordered list</li>
+        </ol>
+        <h3>List with images as item</h3>
+        <ul id="imageList">
+            <li>An item of alist with image marker</li>
+            <li>An item of alist with image marker</li>
+            <li>An item of alist with image marker</li>
+            <li>An item of alist with image marker</li>
+            <li>An item of alist with image marker</li>
+        </ul>
+
+        <h3>List position : inside</h3>
+        <ul id="insideList">
+            <li>An item of a list</li>
+            <li>An item of a list</li>
+            <li>An item of a list</li>
+            <li>An item of a list</li>
+            <li>An item of a list</li>
+    </div>
+    <h3>List position : outside</h3>
+    <ul id="outsideList">
+        <li>An item of a list</li>
+        <li>An item of a list</li>
+        <li>An item of a list</li>
+        <li>An item of a list</li>
+        <li>An item of a list</li>
+    </ul>
+    <h3>List with no style</h3>
+    <ul id="nostyleList">
+        <li>An item of a list</li>
+        <li>An item of a list</li>
+        <li>An item of a list</li>
+        <li>An item of a list</li>
+        <li>An item of a list</li>
+    </ul>
+
+    <h3>List created with shorthand</h3>
+    <ul id="shorthand">
+        <li>An item of a list</li>
+        <li>An item of a list</li>
+        <li>An item of a list</li>
+        <li>An item of a list</li>
+        <li>An item of a list</li>
+    </ul>
+    
+</div>
+</body>
+
+</html>
