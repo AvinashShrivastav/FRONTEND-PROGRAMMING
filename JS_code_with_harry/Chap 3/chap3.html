@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Loops</title>
+</head>
+<body>
+    <script>
+        let obj = {
+            harry : 98,
+            rohan: 70,
+            aakash : 7
+        };
+        for (let i = 0 ; i < Object.keys(obj).length; i++){
+            console.log(obj[Object.keys(obj)[i]]);
+        }
+        for (let marks in obj){
+            console.log(obj[marks]);
+        };
+        // let i = prompt("Enter a Number ");
+        // i = Number.parseInt(i);
+        // while (i != 5){
+        //     console.log("try again");
+        //     alert("Try again");
+        //     i = Number.parseInt(prompt("Enter another Number :"));
+        // }
+        const fiveNumberMean = (a,b,c,d,e) => {
+            let mean = (a+b+c+d+e)/5;
+            return mean;
+        };
+        mean = fiveNumberMean(33,33,33,33,33);
+        console.log(mean)
+        console.log(Object.keys(obj).length);
+
+    </script>
+</body>
+</html>

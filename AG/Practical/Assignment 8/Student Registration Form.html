@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Registration Form</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #mainFormBox{
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        #personalDetailForm"{
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="mainFormBox">
+        <div id="personalDetails">
+            <div id="perDetHead">
+                <h3>Personal Details</h3>
+            </div>
+            <div id="personalDetailForm">
+                Full Name :  <input type="text" id="fullname">
+                Roll Number : <input type="number" id="roll">
+                Email-id : <input type="email" id="email">
+                Date of Birth : <input type="date" id="dob">
+                Age : <input type="number" id="Age">
+                Gender : Male <input type="radio" name = "gender" id="male"> <br>
+                         Female <input type="radio" name="gender" id="female">
+                Category : 
+                <select id="category">
+                    <option value="general">General</option>
+                    <option value="obc">OBC</option>
+                    <option value="ews">EWS</option>
+                    <option value="scst">SC/ST</option>
+                  </select>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

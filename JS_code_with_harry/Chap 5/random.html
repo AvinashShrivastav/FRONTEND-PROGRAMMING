@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Random Number Generator</title>
+
+</head>
+<body>
+    <script>
+        let ranNum = Math.round(10*Math.random());
+        alert(ranNum);
+        document.write(ranNum);
+        let num;
+        let count = 0;
+        while(ranNum !== num){
+            num = Number.parseInt(prompt("Enter a Number :"));
+            if(num > ranNum){
+                alert("Your Number is greater than random number")
+                if(num - ranNum <5){
+                    alert("It was fairly close")
+                }
+            }
+            else if(num === ranNum){
+                alert("Congratulation!!! Tum jeet gye")
+
+            }
+            else {
+                alert("Your Number is smaller than random number")
+                if(ranNum -num <5){
+                    alert("It was fairly close")
+                }
+
+            }
+            count += 1;
+
+
+        }
+        score = 100-count+1;
+        alert(score);
+        
+    </script>
+</body>
+</html>

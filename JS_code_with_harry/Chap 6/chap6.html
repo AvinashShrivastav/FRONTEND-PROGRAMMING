@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Drive or not</title>
+</head>
+
+<body>
+    <script>
+        let age = Number.parseInt(prompt("Enter your age"));
+       
+        const agefun = (age) => {
+            if (age >= 18) {
+                alert("Yes ")
+
+
+            }
+            else if (age >= 0) {
+                alert("No")
+
+            }
+            else {
+                console.error("Negative age")
+            }
+            let choice = confirm("Wanna see prompt again ? ");
+            if (choice){
+                age = Number.parseInt(prompt("Enter your age"));
+                agefun(age)
+            }
+        }
+        agefun(age);
+        
+
+
+        
+    </script>
+
+</body>
+
+</html>
