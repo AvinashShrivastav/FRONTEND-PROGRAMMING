@@ -1,0 +1,634 @@
+Q1 create an html document with bold, italics , underline, colorsetc
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My HTML Document</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #F5F5F5;
+		}
+		h1 {
+			font-size: 36px;
+			font-weight: bold;
+			color: #333333;
+			text-decoration: underline;
+		}
+		p {
+			font-size: 18px;
+			line-height: 1.5;
+			color: #666666;
+		}
+		em {
+			font-style: italic;
+		}
+		strong {
+			font-weight: bold;
+		}
+		u {
+			text-decoration: underline;
+		}
+		.blue {
+			color: blue;
+		}
+		.red {
+			color: red;
+		}
+		.blink {
+			animation: blinker 1s linear infinite;
+		}
+		@keyframes blinker {
+			50% {
+				opacity: 0;
+			}
+		}
+		.marquee {
+			animation: marquee 5s linear infinite;
+		}
+		@keyframes marquee {
+			from {
+				transform: translateX(0%);
+			}
+			to {
+				transform: translateX(100%);
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>My HTML Document</h1>
+	<p>This is a <em>paragraph</em> of text that contains <strong>bold</strong>, <u>underlined</u>, and <span class="blue">blue</span> and <span class="red">red</span> text.</p>
+	<p>Here's another paragraph of text with a <br>line break.</p>
+	<hr>
+	<p class="blink">This text is blinking.</p>
+	<p class="marquee">This text is scrolling across the page.</p>
+</body>
+</html>
+
+Q2create an html document with ordered and unordered lists,inserting images, internal and external linkings.
+
+!DOCTYPE html>
+<html>
+  <head>
+    <title>Example Document</title>
+  </head>
+  <body>
+    <h1>Example Document</h1>
+
+    <h2>Ordered List</h2>
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ol>
+
+    <h2>Unordered List</h2>
+    <ul>
+      <li>Item A</li>
+      <li>Item B</li>
+      <li>Item C</li>
+    </ul>
+
+    <h2>Internal Link</h2>
+    <p><a href="#section2">Go to Section 2</a></p>
+
+    <h2>External Link</h2>
+    <p><a href="https://www.example.com">Visit Example.com</a></p>
+
+    <h2>Image</h2>
+    <img src="https://www.example.com/image.jpg" alt="Example Image">
+
+    <h2 id="section2">Section 2</h2>
+    <p>This is section 2.</p>
+  </body>
+</html>
+
+
+
+
+Q3create an html document for displaying the current semester timetable
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Current Semester's Timetable</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+      }
+      
+      th {
+        background-color: #4CAF50;
+        color: white;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Current Semester's Timetable</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Time/Day</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>8:00 AM - 9:30 AM</td>
+          <td>Physics</td>
+          <td>Maths</td>
+          <td>Computer Science</td>
+          <td>Chemistry</td>
+          <td>English</td>
+        </tr>
+        <tr>
+          <td>10:00 AM - 11:30 AM</td>
+          <td>English</td>
+          <td>Chemistry</td>
+          <td>Physics</td>
+          <td>Maths</td>
+          <td>Computer Science</td>
+        </tr>
+        <tr>
+          <td>12:00 PM - 1:30 PM</td>
+          <td>Computer Science</td>
+          <td>Physics</td>
+          <td>English</td>
+          <td>Chemistry</td>
+          <td>Maths</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+
+
+
+Q5 create a student registration form using html which has the following controls
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Registration Form</title>
+    <style>
+      form {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      
+      input[type="text"],
+      select {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 16px;
+      }
+      
+      input[type="submit"],
+      input[type="reset"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+        margin-left: 10px;
+      }
+      
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      
+      input[type="reset"]:hover {
+        background-color: #f44336;
+      }
+      
+      label {
+        font-weight: bold;
+      }
+      
+      .radio-label {
+        margin-right: 20px;
+      }
+      
+      .checkbox-label {
+        margin-bottom: 10px;
+      }
+      
+      .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      
+      .half {
+        width: 50%;
+        padding-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Student Registration Form</h1>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name">
+      
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" placeholder="Enter your email">
+      
+      <label for="gender">Gender:</label>
+      <div class="radio-label">
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+      </div>
+      <div class="radio-label">
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+      </div>
+      
+      <label for="department">Department:</label>
+      <select id="department" name="department">
+        <option value="Computer Science">Computer Science</option>
+        <option value="Mathematics">Mathematics</option>
+        <option value="Physics">Physics</option>
+        <option value="Chemistry">Chemistry</option>
+      </select>
+      
+      <label for="courses">Courses:</label>
+      <div class="container">
+        <div class="half">
+          <div class="checkbox-label">
+            <input type="checkbox" id="course1" name="courses" value="course1">
+            <label for="course1">Course 1</label>
+          </div>
+          <div class="checkbox-label">
+            <input type="checkbox" id="course2" name="courses" value="course2">
+            <label for="course2">Course 2</label>
+          </div>
+        </div>
+        <div class="half">
+          <div class="checkbox-label">
+            <input type="checkbox" id="course3" name="courses" value="course3
+
+Q6create a webpage for your department with a drop down navigation menu for faculty course, activities, etc implement the webpage using styles,rules , selectors etc using css
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Department Website</title>
+    <style>
+      /* Reset CSS */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      /* General Styles */
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+      }
+      
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      
+      /* Header Styles */
+      header {
+        background-color: #fff;
+        border-bottom: 1px solid #ccc;
+        padding: 20px 40px;
+      }
+      
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      
+      .navigation {
+        display: flex;
+      }
+      
+      .navigation-item {
+        margin-left: 20px;
+      }
+      
+      .navigation-item:hover {
+        border-bottom: 2px solid #333;
+      }
+      
+      /* Dropdown Styles */
+      .dropdown {
+        position: relative;
+      }
+      
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        left: 0;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      }
+      
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+      
+      .dropdown-menu-item {
+        padding: 12px 16px;
+        display: block;
+      }
+      
+      .dropdown-menu-item:hover {
+        background-color: #ddd;
+      }
+      
+      /* Main Content Styles */
+      .main-content {
+        margin: 40px;
+      }
+      
+      h1 {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      
+      p {
+        margin-bottom: 20px;
+      }
+      
+      ul {
+        list-style: disc;
+        margin-bottom: 20px;
+      }
+      
+      li {
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">Department Name</div>
+        <nav class="navigation">
+          <a href="#">Home</a>
+          <div class="dropdown">
+            <a href="#">Faculty</a>
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-menu-item">Professor 1</a>
+              <a href="#" class="dropdown-menu-item">Professor 2</a>
+              <a href="#" class="dropdown-menu-item">Professor 3</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="#">Courses</a>
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-menu-item">Course 1</a>
+              <a href="#" class="dropdown-menu-item">Course 2</a>
+              <a href="#" class="dropdown-menu-item">Course 3</a>
+            </div>
+          </div>
+          <a href="#">Activities</
+
+
+Q8 create a student registration form using text radio using js 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+    box-sizing: border-box;
+    width: 100%;
+    border: 100px solid black;
+    float: left;
+    align-content: center;
+    align-items: center;
+}
+  
+form {
+    margin: 0 auto;
+    width: 600px;
+}
+</style>
+<script>
+    function parvejtahil(){
+	var name =
+		document.forms.RegForm.Name.value;
+	var email =
+		document.forms.RegForm.EMail.value;
+	var phone =
+		document.forms.RegForm.Telephone.value;
+	var what =
+		document.forms.RegForm.Subject.value;
+	var password =
+		document.forms.RegForm.Password.value;
+	var address =
+		document.forms.RegForm.Address.value;
+	var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g; //Javascript reGex for Email Validation.
+	var regPhone=/^\d{10}$/;									 // Javascript reGex for Phone Number validation.
+	var regName = /\d+$/g;								 // Javascript reGex for Name validation
+
+	if (name == "" || regName.test(name)) {
+		window.alert("Please enter your name properly.");
+		name.focus();
+		return false;
+	}
+
+	if (address == "") {
+		window.alert("Please enter your address.");
+		address.focus();
+		return false;
+	}
+	
+	if (email == "" || !regEmail.test(email)) {
+		window.alert("Please enter a valid e-mail address.");
+		email.focus();
+		return false;
+	}
+	
+	if (password == "") {
+		alert("Please enter your password");
+		password.focus();
+		return false;
+	}
+
+	if(password.length <6){
+		alert("Password should be atleast 6 character long");
+		password.focus();
+		return false;
+
+	}
+	if (phone == "" || !regPhone.test(phone)) {
+		alert("Please enter valid phone number.");
+		phone.focus();
+		return false;
+	}
+
+	if (what.selectedIndex == -1) {
+		alert("Please enter your course.");
+		what.focus();
+		return false;
+	}
+
+	return true;
+} 
+
+</script>
+<body>
+    <h1 style="text-align: center;">REGISTRATION FORM</h1>
+    <form name="RegForm" onsubmit="return parvejtahil()" method="post">
+        <p>Name: <input type="text" size="65" name="Name" /></p>
+        <br />
+        <p>Address: <input type="text" size="65" name="Address" />
+        </p>
+        <br />
+        <p>E-mail Address: <input type="text" size="65" name="EMail" /></p>
+        <br />
+        <p>Password: <input type="text" size="65" name="Password" /></p>
+        <br />
+        <p>Telephone: <input type="text" size="65" name="Telephone" /></p>
+        <br />
+        <p>
+            SELECT YOUR COURSE
+            <select type="text" value="" name="Subject">
+                <option>BTECH</option>
+                <option>BBA</option>
+                <option>BCA</option>
+                <option>B.COM</option>
+                <option>GEEKFORGEEKS</option>
+            </select>
+        </p>
+        <br />
+        <br />
+        <p>Comments: <textarea cols="55" name="Comment"> </textarea></p>
+        <p>
+            <input type="submit" value="send" name="Submit" />
+            <input type="reset" value="Reset" name="Reset" />
+        </p>
+    </form>
+    
+</body>
+</html>
+
+Q4 create a website with horizontal and vertical frame. Top horizonatl frame needs to show your college's name
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SSCBS Website</title>
+    <style>
+      /* Styling for the top horizontal frame */
+      #top-frame {
+        background-color: #003366;
+        color: #ffffff;
+        text-align: center;
+        height: 80px;
+        line-height: 80px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      
+      /* Styling for the left vertical frame */
+      #left-frame {
+        background-color: #f9f9f9;
+        float: left;
+        width: 20%;
+        height: calc(100vh - 80px);
+      }
+      
+      /* Styling for the links in the left frame */
+      #left-frame a {
+        display: block;
+        padding: 10px;
+        color: #333333;
+        text-decoration: none;
+      }
+      
+      /* Styling for the right vertical frame */
+      #right-frame {
+        background-color: #ffffff;
+        float: left;
+        width: 80%;
+        height: calc(100vh - 80px);
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      
+      /* Styling for the content in the right frame */
+      h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <!-- Top horizontal frame -->
+    <div id="top-frame">
+      <img src="logo.png" alt="SSCBS logo" width="50" height="50">
+      SHAHEED SUKHDEV COLLEGE OF BUSINESS STUDIES
+    </div>
+    
+    <!-- Bottom horizontal frame -->
+    <div id="bottom-frame">
+      <!-- Left vertical frame -->
+      <div id="left-frame">
+        <a href="#faculty">Faculty</a>
+        <a href="#courses">Courses</a>
+        <a href="#students">Students</a>
+        <a href="#activities">Activities</a>
+      </div>
+      
+      <!-- Right vertical frame -->
+      <div id="right-frame">
+        <h2>Welcome to SSCBS!</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed ante at sapien sodales tincidunt. Praesent tincidunt turpis quam, nec auctor lectus interdum a. Proin tincidunt eros at risus ullamcorper suscipit. Donec efficitur fringilla dui, vel tincidunt sapien faucibus eu.</p>
+      </div>
+    </div>
+  </body>
+</html>
