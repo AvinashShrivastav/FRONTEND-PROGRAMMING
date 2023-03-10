@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Student Regisration Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background: linear-gradient(45DEG, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+            background-size: 200% 200%;
+            animation: gradient 5s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        #mainform {
+            height: 500px;
+            width: 800px;
+            /* border: 1px solid black; */
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+
+        }
+
+        #mainform #header,
+        #footer {
+            box-sizing: border-box;
+            height: 10%;
+            width: 100%;
+            /* border: 1px solid black; */
+        }
+
+        #mainform #content {
+            box-sizing: border-box;
+            height: 80%;
+            width: 100%;
+            /* border: 1px solid black; */
+
+        }
+
+        #header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #header #logo img {
+            width: 20%;
+            height: 20%;
+        }
+
+        #header #logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+        }
+
+        #header #heading {
+            width: 70%;
+        }
+
+        #content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #content #personal {
+            width: 100%;
+            height: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid black; */
+
+        }
+
+        #content #education {
+            width: 100%;
+            height: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* border: 1px solid black; */
+        }
+
+        #personal #p-form {
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            /* border: 1px solid black */
+        }
+
+        #personal #p-form #personal-head {
+            width: 100%;
+            height: 10%;
+            /* border: 1px solid black */
+        }
+
+        #personal #p-form #inner-form {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            flex-direction: column;
+            width: 100%;
+            height: 90%;
+            /* border: 1px solid black; */
+            padding: 5px;
+        }
+
+        #inner-edu-form {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            flex-direction: column;
+            width: 100%;
+            height: 90%;
+            /* border: 1px solid black; */
+            padding: 5px;
+        }
+
+        #inner-edu-form div {
+            padding: 5px;
+        }
+
+        #personal #p-form #inner-form div,
+        input {
+            padding: 4px;
+        }
+
+        #personal #image {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 30%;
+            height: 100%;
+            /* border: 1px solid rgb(216, 51, 51) */
+        }
+
+        #image #stud-pic-frame {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 70%;
+            width: 70%;
+            border: 1px solid rgba(0, 0, 0, 0.144);
+            padding: 5px;
+        }
+
+        #image #pic-upload {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25%;
+            width: 100%;
+            /* border: 1px rgb(141, 250, 114); */
+        }
+
+
+        #education #education-head {
+            width: 100%;
+            height: 15%;
+            /* border: 1px solid black */
+        }
+
+        #education #inner-edu-form {
+            width: 100%;
+            height: 90%;
+            /* border: 1px solid black */
+        }
+
+        #footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #button {
+            width: 25%;
+            height: 50%;
+            border-radius: 50px;
+            border: none;
+            background: rgba(57, 124, 225, 0.826);
+            color: white;
+            transition: 0.5s;
+        }
+
+        #button:hover {
+            background: #405DE6;
+        }
+
+        h3,
+        h2 {
+            color: #405DE6;
+            font-weight: bold;
+        }
+
+        input {
+            margin: 5px;
+            padding: 5px;
+            border: none;
+            border-bottom: 1px solid;
+            /* width: 50%; */
+
+        }
+
+        span {
+            color: #FD1D1D;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <div id="mainform">
+            <div id="header">
+                <div id="logo"> <img src="logo.png" alt=""></div>
+                <div id="heading">
+                    <h2>Student Registration Form</h2>
+                </div>
+            </div>
+            <div id="content">
+                <div id="personal">
+                    <div id="p-form">
+                        <div class="inner-heading" id="personal-head">
+                            <h3>Personal Detail</h3>
+                        </div>
+                        <div id="inner-form">
+                            <div>
+
+                                <label for="name">Name</label> <input type="text" id="stud-name"
+                                    placeholder="Student's name goes here!"> <span id="error-name"></span>
+                            </div>
+
+                            <div>
+
+                                <label for="gender">Gender: <input type="radio" name="stud-gen" id="male"> <label
+                                        for="male">Male</label>
+                                    <input type="radio" name="stud-gen" id="male"> <label for="female">Female</label>
+                                </label>
+                            </div>
+                            <div>
+
+                                <label for="email">College Email-Id</label> <input type="email" id="email"> <span
+                                    id="error-email"></span>
+                            </div>
+                            <div>
+
+                                <label for="phone">Phone Number</label> <input type="text" id="number"> <span
+                                    id="error-number"></span>
+                            </div>
+                            <div>
+
+                                <label for="dob">Date of Birth</label> <input type="text" id="dob"> <span
+                                    id="error-dob"></span>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div id="image">
+                        <div id="stud-pic-frame">
+                            <h4>Please select your passport size photo</h4>
+                            <div id="pic-upload">
+                                <input type="file" id="stud-pic">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="education">
+                    <div class="inner-heading" id="education-head">
+                        <h3>Educational Detail</h3>
+                    </div>
+                    <div id="inner-edu-form">
+                        <div><label for="course">Course: </label>
+                            <select id="course">
+                                <option value="cs">BSC CS (H) </option>
+                                <option value="bms">BMS </option>
+                                <option value="bba">BBA </option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="sem">Semester</label>
+                            <select id="semester">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="roll">Roll Number</label> <input type="number" id="stud-roll"
+                                placeholder="22512"> <span id="error-roll"></span>
+
+                        </div>
+                        <div>
+                            <label for="prev-school">Previous School</label>
+                            <input type="text" id="prev-school"> <span id="error-prevschool"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div id="footer">
+                <input type="button" id="button" value="Register" onclick='validate()'>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        const validate = () => {
+
+            validateRollNumber()
+            validateName()
+            validateEmail()
+            validatePhone()
+            validateDOB()
+
+        }
+        function validateRollNumber() {
+            let roll = document.getElementById("stud-roll");
+            if (roll.value.length == 0) {
+                error("error-roll", "*Roll number is a required field!")
+            }
+            else if (roll.value.length != 7) {
+                error("error-roll", "Roll number must be of a 7 digits")
+            }
+        }
+        const validateName = () => {
+            let name = document.getElementById("stud-name").value;
+            if (name.length == 0) {
+                error("error-name", "*Name is a required field!")
+            }
+            else if (!/^[a-zA-Z ]+$/.test(name)) {
+                error("error-name", "Name must only contain Alphabets")
+
+            }
+        }
+        const validateEmail = () => {
+            let email = document.getElementById("email").value;
+            let emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+            if (email.length == 0) {
+                error("error-email", "*Email is a required field!")
+            }
+            else if (!emailPattern.test(email)) {
+                error("error-email", "Invalid email address")
+            }
+
+        }
+        const validatePhone = () => {
+            number = document.getElementById("number").value;
+            let numberPattern = '^\d{10}$'
+            if (number.length == 0) {
+                error("error-number", "*Mobile Number is a required field!")
+
+            }
+            else if (!numberPattern.test(number)) {
+                error("error-number", "Enter a valid mobile number")
+            }
+
+        }
+
+        const validateDOB = () => {
+            let dob = document.getElementById("dob").value;
+            console.log(dob)
+            let dobPattern = '^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}$';
+            if (dob.length == 0) {
+                error("error-dob", "*DOB is a required field!")
+            }
+            else if (!dobPattern.test(dob)) {
+                error("error-dob", "Please enter DOB in dd/mm/yyyy format")
+            }
+        }
+        const empty = (id) => {
+            let box = document.getElementById(id).value;
+            if (box.length == 0) {
+                return true;
+            }
+
+        }
+        const error = (id, errorMsg) => {
+            let errorbox = document.getElementById(id);
+            errorbox.innerHTML = errorMsg;
+            return;
+        }
+    </script>
+</body>
+
+</html>

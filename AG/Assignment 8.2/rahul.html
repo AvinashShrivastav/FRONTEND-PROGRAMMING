@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Registration Form</title>
+    <style>
+        .error {
+            color: red;
+        }
+
+        .form-control {
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Registration Form</h1>
+    <form id="registration-form">
+        <div class="form-control">
+            <label for="roll-number">Roll Number:</label>
+            <input type="text" id="roll-number" name="roll-number" required />
+            <span class="error" id="roll-number-error"></span>
+        </div>
+        <div class="form-control">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            <span class="error" id="name-error"></span>
+        </div>
+        <div class="form-control">
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required />
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other" />
+            <label for="other">Other</label>
+            <span class="error" id="gender-error"></span>
+        </div>
+        <div class="form-control">
+            <label for="dob">Date of Birth:</label>
+            <input type="text" id="dob" name="dob" required />
+            <span class="error" id="dob-error"></span>
+        </div>
+        <div class="form-control">
+            <label for="hobbies">Hobbies:</label>
+            <input type="checkbox" id="reading" name="hobbies" value="reading" />
+            <label for="reading">Reading</label>
+            <input type="checkbox" id="writing" name="hobbies" value="writing" />
+            <label for="writing">Writing</label>
+            <input type="checkbox" id="sports" name="hobbies" value="sports" />
+            <label for="sports">Sports</label>
+            <span class="error" id="hobbies-error"></span>
+        </div>
+        <div class="form-control">
+            <label for="department">Department:</label>
+            <select id="department" name="department" required>
+                <option value="">Select</option>
+                <option value="computer-science">Computer Science</option>
+                <option value="electronics">Electronics</option>
+                <option value="mechanical">Mechanical</option>
+            </select>
+            <span class="error" id="department-error"></span>
+        </div>
+        <div class="form-control">
+            <button type="submit " value="Submit">Submit </button>
+        </div>
+
+    </form>
+    <script>
+        const form = document.getElementById("registration-form");
+        form.addEventListener("submit", validateForm);
+        function validateForm(event) {
+            event.preventDefault();
+            let isValid = true;
+
+            // Validate roll number
+            const rollNumber = document.getElementById("roll-number").value;
+            const rollNumberError = document.getElementById("roll-number-error");
+            if (!/^\d{7}$/.test(rollNumber)) {
+                rollNumberError.textContent = "Roll number must be a 7-digit numeric value";
+                isValid = false;
+            } else {
+                rollNumberError.textContent = "";
+            }
+
+            // Validate name
+            const name = document.getElementById("name").value;
+            const nameError = document.getElementById("name-error");
+            if (!/^[a-zA-Z]+$/.test(name)) {
+                nameError.textContent = "Name should be an alphabetical value";
+                isValid = false;
+            } else {
+                nameError.textContent = "";
+            }
+
+            // Validate gender
+            const gender = document.querySelector("input[name='gender']:checked");
+            const genderError = document.getElementById("gender-error");
+            if (!gender) {
+                genderError.textContent = "Please select your gender";
+                isValid = false;
+            } else {
+                genderError.textContent = "";
+            }
+
+            // Validate DOB
+            const dob = document.getElementById("dob").value;
+            const dobError = document.getElementById("dob-error");
+            if (!/^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/[0-9]{4}$/.test(dob)) {
+                dobError.textContent = "Please enter a valid date of birth in dd/mm/yyyy format";
+                isValid = false;
+            } else {
+                dobError.textContent = "";
+            }
+
+            // Validate hobbies
+            const hobbies = document.querySelectorAll("input[name='hobbies']:checked");
+            const hobbiesError = document.getElementById("hobbies-error");
+            if (hobbies.length === 0) {
+                hobbiesError.textContent = "Please select at least one hobby";
+                isValid = false;
+            } else {
+                hobbiesError.textContent = "";
+            }
+
+            // Validate department
+            const department = document.getElementById("department").value;
+            const departmentError = document.getElementById("department-error");
+            if (!department) {
+                departmentError.textContent = "Please select your department";
+                isValid = false;
+            } else {
+                departmentError.textContent = "";
+            }
+
+            // Submit the form if all fields are valid
+            if (isValid) {
+                form.submit();
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!-- Q7.4 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sum and Average founder</title>
+</head>
+<body>
+    <script>
+        let num;
+        let count = -1;
+        let sum = 0;
+        do {
+            num = Number.parseInt(prompt("Enter Number :"));
+            sum += num;
+            count += 1;
+        }
+        while(num !== 0)
+        document.write("The sum is "+ sum + "<br>")
+        document.write("The average is " + sum / count)
+
+
+    </script>
+</body>
+</html>

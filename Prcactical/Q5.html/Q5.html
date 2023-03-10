@@ -1,0 +1,115 @@
+<!-- Q5 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Registration</title>
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+    }
+    
+    #mainform {
+      border: 1px solid black ;
+      width: 70%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 40px;
+      background-color: white;
+      box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      margin: 50px auto;
+    }
+    
+    .heading h1{
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    
+    #regForm{
+      width: 100%;
+      text-align: left;
+    }
+    
+    #regForm label{
+      font-size: 20px;
+      margin-top: 20px;
+      display: block;
+    }
+    
+    #regForm input[type="text"], #regForm select, #regForm input[type="radio"], #regForm input[type="checkbox"]{
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    
+    #btn{
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    
+    #btn button{
+      padding: 10px 20px;
+      font-size: 20px;
+      border-radius: 5px;
+      margin: 0 10px;
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .heading{
+        color: rgb(48, 96, 230);
+    }
+  </style>
+</head>
+<body>
+  <div id="mainform">
+    <div class="heading"><h1 class="heading">Student's Registration Form</h1></div>
+    <form id="regForm">
+      <div class="heading">
+        Name : <input type="text"  id="name">
+      </div>
+      <div id="course">
+        <div class="heading">
+            Course :
+        </div>
+        <select id="courses">
+          <option value="bms">BMS</option>
+          <option value="bsc">BSC</option>
+          <option value="bba">BBA</option>
+        </select>
+      </div>
+    <div id="gender">
+        <div class="heading">Gender:</div>
+      
+      
+      <input type="radio" name="gender" id="male"> Male
+      <input type="radio" name="gender" id="female"> Female
+    </div>
+    <div id="hobbies">
+        <div class="heading">Hobbies :</div>
+    
+      <input type="checkbox" id="study"> Study
+      <input type="checkbox"  id="sports"> Sports
+      <input type="checkbox" id="other"> Other
+    </div>
+    <div id="btn">
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </div>
+    </form>
+  
+    <br>
+  </div>
+</body>
+</html>

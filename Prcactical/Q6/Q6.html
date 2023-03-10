@@ -1,0 +1,104 @@
+<!-- Q6 -->
+<html>
+<head>
+  <title>Department Page</title>
+  <style>
+    body{
+        background-image: url(https://sscbs.du.ac.in/wp-content/uploads/2020/04/00-Cover.jpg) ;
+        background-size: cover ;
+        background-position: center ;
+        opacity: 0.7;
+    }
+    
+    /* Navigation Menu */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+
+    .navbar .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      color: #fff;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Main Content */
+    .container {
+      padding: 50px;
+    }
+
+    /* Clearfix */
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    
+  </style>
+</head>
+<body>
+  <!-- Navigation Menu -->
+  <div class="navbar clearfix">
+    <a href="#">Department Page</a>
+    <div class="dropdown">
+      <a href="#">Faculty</a>
+      <div class="dropdown-content">
+        <a href="#">AJAY JAISWAL, PH.D.</a>
+        <a href="#">SHIKHA GUPTA, PH.D.</a>
+        <a href="#">ANAMIKA GUPTA, PH.D.</a>
+        <a href="#">SONIKA THAKRAL, PH.D.</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Courses</a>
+      <div class="dropdown-content">
+        <a href="#">BMS</a>
+        <a href="#">BSC</a>
+        <a href="#">BBA</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Activities</a>
+      <div class="dropdown-content">
+        <a href="#">Hackathons</a>
+        <a href="#">Annual Meet</a>
+        <a href="#">Sports Events</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>Welcome to the Department of Computer Science</h1>
+    <p>This is the official page for the department, where you can find information about our faculty, courses, and activities. Use the navigation menu above to explore our offerings.</p>
+  </div>
+</body>
+</html>

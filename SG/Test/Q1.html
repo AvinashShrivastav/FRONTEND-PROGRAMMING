@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Registration</title>
+  <style>
+    #mainform {
+      border: 1px solid black ;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="mainform">
+    <form id="regForm">
+      <div id="name">
+        Name : <input type="text"  id="name">
+      </div>
+      <div id="course">
+        Course : <select id="courses">
+          <option value="bms">BMS</option>
+          <option value="bsc">BSC</option>
+          <option value="bba">BBA</option>
+        </select>
+      </div>
+    <div id="gender">
+      Gender:
+      <input type="radio" id="male"> Male
+      <input type="radio" id="female"> Female
+    </div>
+    <div id="hobbies">
+      <input type="checkbox" id="study"> Study
+      <input type="checkbox"  id="sports"> Sports
+      <input type="checkbox" id="other"> Other
+    </div>
+    <div id="btn">
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </div>
+    </form>
+  
+    <br>
+  </div>
+</body>
+</html>
